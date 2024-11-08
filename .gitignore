@@ -15,7 +15,7 @@ downloads/
 eggs/
 .eggs/
 lib/
-lib64/
+lib64
 parts/
 sdist/
 var/
@@ -124,10 +124,13 @@ celerybeat.pid
 # Environments
 .env
 .venv
+bin/
 env/
+include/
 venv/
 ENV/
 env.bak/
+pyvenv.cfg
 venv.bak/
 
 # Spyder project settings
