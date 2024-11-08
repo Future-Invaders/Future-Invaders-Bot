@@ -70,4 +70,3 @@ async def cardsearch(
     
 
 bot.run(os.getenv('TOKEN')) # run the bot with the token
-bot.register_commands(guild_id=920714672766849054)
