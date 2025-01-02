@@ -71,9 +71,10 @@ async def cardsearch(
         response = requests.get(f"{url}/cards", params={'name': query}, timeout=10)
         response.raise_for_status()
         answer = process_response(response.json(), language)
-        if answer is str:
+        print(type(answer))
+        if isinstance(answer, str):
             await context.respond(content=answer)
-        if answer is discord.Embed:
+        if isinstance(answer, discord.embeds.Embed):
             await context.respond(embed=answer)
     except HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")
