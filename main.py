@@ -71,7 +71,6 @@ async def cardsearch(
         response = requests.get(f"{url}/cards", params={'name': query}, timeout=10)
         response.raise_for_status()
         answer = process_response(response.json(), language)
-        print(type(answer))
         if isinstance(answer, str):
             await context.respond(content=answer)
         if isinstance(answer, discord.embeds.Embed):
